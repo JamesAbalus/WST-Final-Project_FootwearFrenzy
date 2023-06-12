@@ -11,4 +11,4 @@ Created by : <br>
 
 
 
-![preview img](/preview.png)
+![preview img](../assets/img/)
