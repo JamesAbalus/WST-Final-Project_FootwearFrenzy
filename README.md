@@ -9,7 +9,7 @@ Created by : <br>
  - Ramon Alejandro Rodriguez - BSCS3B1 <br>
  - James Rodolfo L. Abalus - BSCS3B1 <br>
   
-#### In fullfilment of the Final Project of Web System and Technologies
+#### In fulfillment of the Final Project of Web System and Technologies
 
 ![1](https://github.com/JamesAbalus/WST-Final-Project_FootwearFrenzy/assets/111432311/b15d3e89-5640-4c57-9c89-8abdb45c2f59)
 
