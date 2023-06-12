@@ -1,3 +1,4 @@
+//array
 var cartItems = [
   {
     title: "Nike Flyby 3",
@@ -20,6 +21,7 @@ var cartItems = [
 function generateCartHTML() {
   var cartContainer = document.getElementById("cart");
 
+  //looping
   for (var i = 0; i < cartItems.length; i++) {
     var item = cartItems[i];
 
