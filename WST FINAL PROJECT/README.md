@@ -2,7 +2,7 @@
 ## Ecommerce Website
 ### Nike Shoes ⌚
 
-Created by : 
+Created by : <br>
   Ramon Alejandro Rodriguez - BSCS3B1 <br>
   James Rodolfo L. Abalus - BSCS3B1
   
