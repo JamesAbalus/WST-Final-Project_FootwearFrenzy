@@ -3,11 +3,11 @@ Final Project in Web System and Technologies. An ecommerce website that highligh
 
 # Footwear Frenzy ⌚
 ## Ecommerce Website
-### Nike Shoes ⌚
+### Nike Shoes ⌚ <br>
 
 Created by : <br>
  - Ramon Alejandro Rodriguez - BSCS3B1 <br>
- - James Rodolfo L. Abalus - BSCS3B1
+ - James Rodolfo L. Abalus - BSCS3B1 <br>
   
 #### In fullfilment of the Final Project of Web System and Technologies
 
