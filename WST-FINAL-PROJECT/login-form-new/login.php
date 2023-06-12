@@ -29,10 +29,12 @@
   include_once("../config/config.php");
   include_once("../config/db.php");
 
+  //if
   if (session_status() === PHP_SESSION_NONE) {
     session_start();
   }
 
+  //if
   if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST)) {
     echo json_encode($_POST);
 
@@ -43,6 +45,7 @@
     $q = mysqli_query($conn, $qs);
 
     $account = null;
+    //if
     if ($q && mysqli_num_rows($q) > 0) {
       // Fetch the account information from the query result
       $account = mysqli_fetch_assoc($q);

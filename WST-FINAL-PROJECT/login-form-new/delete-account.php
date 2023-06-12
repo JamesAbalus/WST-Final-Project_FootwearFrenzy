@@ -27,12 +27,14 @@
     include_once("../config/config.php");
     include_once("../config/db.php");
 
+    //if
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
 
     $account = null;
 
+    //if-else
     if (empty($_SESSION['accounts'])) {
         header("Location: ../index.php");
         exit;
@@ -44,32 +46,34 @@
     $successMsg = "";
     $failMsg = "";
 
-
+    //if
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST)) {
         // echo json_encode($_POST);
         $email = $account['email'];
         $password = $_POST['password'];
         $confirm_password = $_POST['confirm_password'];
 
-
+        //if-else
         if (strcmp($password, $confirm_password) != 0) {
             $passwordError = "Passwords do not match";
         } else {
             $qs = "SELECT * FROM `accounts` WHERE `email` = '$email' AND `password` = '$password'";
             $q = mysqli_query($conn, $qs);
 
+            //if
             if (($q && mysqli_num_rows($q) > 0) == false) {
                 $failMsg = "Incorrect old Password";
             }
         }
 
 
-
+        //if
         if (empty($passwordError) && empty($failMsg)) {
             // delete to db
             $stmt = $conn->prepare("DELETE FROM `accounts` WHERE `email` = ?");
             $stmt->bind_param("s", $email);
 
+            //if-else
             if ($stmt->execute()) {
                 $successMsg = "Account deleted successfully.";
                 session_unset();

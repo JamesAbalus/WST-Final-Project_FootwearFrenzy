@@ -30,16 +30,19 @@
 
   $passwordError = "";
 
+  //if
   if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST)) {
     // echo json_encode($_POST);
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
+    //if
     if (strcmp($password, $confirm_password) != 0) {
       $passwordError = "Passwords do not match";
     }
 
+    //if
     if (empty($passwordError)) {
       // insert to db
       $stmt = $conn->prepare("INSERT INTO accounts (email, password) VALUES (?, ?)");
@@ -48,6 +51,7 @@
       $stmt->bind_param("ss", $email, $password);
 
       // Execute the statement
+      //if-else
       if ($stmt->execute()) {
         // Insertion was successful
         // echo "Data inserted successfully!";
