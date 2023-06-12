@@ -36,7 +36,7 @@
     $account = null;
 
 
-    //if
+    //if-else
     if (empty($_SESSION['accounts'])) {
         header("Location: ../index.php");
         exit;
