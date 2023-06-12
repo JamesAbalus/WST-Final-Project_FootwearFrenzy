@@ -1,3 +1,5 @@
+//TECHNICALLY, THIS FILE CONTAINS THE DOCUMENT OBJECT MODEL (DOM) OF THE WEBSITE.
+
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),

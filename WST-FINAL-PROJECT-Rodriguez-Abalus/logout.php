@@ -7,7 +7,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-//if-else
+//if-else (CRUD)
 if (!empty($_SESSION['accounts'])) {
     session_unset();
     session_destroy();

@@ -34,7 +34,7 @@
     session_start();
   }
 
-  //if
+  //if (CRUD)
   if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST)) {
     echo json_encode($_POST);
 
@@ -45,7 +45,7 @@
     $q = mysqli_query($conn, $qs);
 
     $account = null;
-    //if
+    //if (CRUD)
     if ($q && mysqli_num_rows($q) > 0) {
       // Fetch the account information from the query result
       $account = mysqli_fetch_assoc($q);

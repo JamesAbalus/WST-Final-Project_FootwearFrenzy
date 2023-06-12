@@ -25,12 +25,13 @@
         include_once("config/config.php");
         include_once("config/db.php");
 
-        // if
+        // if 
         
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-
+        
+        // if (CRUD)
         if (!empty($_SESSION['accounts'])) {
             $account = $_SESSION['accounts'];
         }

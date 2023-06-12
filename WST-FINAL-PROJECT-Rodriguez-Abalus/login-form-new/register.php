@@ -30,19 +30,19 @@
 
   $passwordError = "";
 
-  //if
+  //if (CRUD)
   if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST)) {
     // echo json_encode($_POST);
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
-    //if
+    //if (CRUD)
     if (strcmp($password, $confirm_password) != 0) {
       $passwordError = "Passwords do not match";
     }
 
-    //if
+    //if (CRUD)
     if (empty($passwordError)) {
       // insert to db
       $stmt = $conn->prepare("INSERT INTO accounts (email, password) VALUES (?, ?)");
@@ -51,7 +51,7 @@
       $stmt->bind_param("ss", $email, $password);
 
       // Execute the statement
-      //if-else
+      //if-else (CRUD)
       if ($stmt->execute()) {
         // Insertion was successful
         // echo "Data inserted successfully!";
@@ -82,14 +82,7 @@
                 <div class="w-100">
                   <h3 class="mb-4">FOOTWEAR FRENZY!</h3>
                 </div>
-              </div>
-              <!-- <div class="w-100">
-                <p class="social-media d-flex justify-content-end">
-                  <a href="https://www.facebook.com/" target="_blank" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
-                  <a href="https://twitter.com/" target="_blank" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
-                  <a href="https://www.instagram.com/" target="_blank" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-instagram"></span></a>
-                </p>
-              </div> -->
+              </div>             
               <form action="register.php" method="POST" class="signin-form">
                 <div class="form-group mb-3">
                   <label class="label" for="name">Email</label>
@@ -106,7 +99,7 @@
                 </div>
                 <div class="form-group">
                   <a href="web-finals/"><button type="submit" class="form-control btn btn-primary rounded submit px-3">
-                      Sign In
+                      Submit
                     </button></a>
                 </div>
               </form>

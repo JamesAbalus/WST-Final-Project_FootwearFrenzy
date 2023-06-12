@@ -36,7 +36,7 @@
     $account = null;
 
 
-    //if-else
+    //if-else (CRUD)
     if (empty($_SESSION['accounts'])) {
         header("Location: ../index.php");
         exit;
@@ -48,7 +48,7 @@
     $successMsg = "";
     $failMsg = "";
 
-    //if
+    //if (CRUD)
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST)) {
         // echo json_encode($_POST);
         $email = $account['email'];
@@ -56,7 +56,7 @@
         $password = $_POST['password'];
         $confirm_password = $_POST['confirm_password'];
 
-        //if
+        //if (CRUD)
         if (strcmp($password, $confirm_password) != 0) {
             $passwordError = "Passwords do not match";
         }
@@ -64,19 +64,19 @@
         $qs = "SELECT * FROM `accounts` WHERE `email` = '$email' AND `password` = '$old_password'";
         $q = mysqli_query($conn, $qs);
 
-        //if
+        //if (CRUD)
         if (($q && mysqli_num_rows($q) > 0) == false) {
             $failMsg = "Incorrect old Password";
         }
 
 
-        //if
+        //if (CRUD)
         if (empty($passwordError) && empty($failMsg)) {
             // insert to db
             $stmt = $conn->prepare("UPDATE `accounts` SET `password` = ? WHERE `email` = ?");
             $stmt->bind_param("ss", $password, $email);
 
-            //if-else
+            //if-else (CRUD)
             if ($stmt->execute()) {
                 // Insertion was successful
                 $successMsg = "Password updated successfully.";
