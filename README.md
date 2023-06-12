@@ -6,8 +6,8 @@ Final Project in Web System and Technologies. An ecommerce website that highligh
 ### Nike Shoes ⌚
 
 Created by : <br>
-  Ramon Alejandro Rodriguez - BSCS3B1 <br>
-  James Rodolfo L. Abalus - BSCS3B1
+ - Ramon Alejandro Rodriguez - BSCS3B1 <br>
+ - James Rodolfo L. Abalus - BSCS3B1
   
 - In fullfilment of the Final Project of Web System and Technologies
 
